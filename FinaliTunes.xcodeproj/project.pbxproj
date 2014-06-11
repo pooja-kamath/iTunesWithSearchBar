@@ -21,6 +21,9 @@
 		78B72C841948509600BB048E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78B72C661948509600BB048E /* UIKit.framework */; };
 		78B72C8C1948509600BB048E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 78B72C8A1948509600BB048E /* InfoPlist.strings */; };
 		78B72C8E1948509600BB048E /* FinaliTunesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 78B72C8D1948509600BB048E /* FinaliTunesTests.m */; };
+		78B72C991948585900BB048E /* SBTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78B72C981948585900BB048E /* SBTableViewController.m */; };
+		78B72C9C194858AF00BB048E /* SBTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 78B72C9B194858AF00BB048E /* SBTableViewCell.m */; };
+		78B72CA5194889C000BB048E /* SBdata.m in Sources */ = {isa = PBXBuildFile; fileRef = 78B72CA4194889C000BB048E /* SBdata.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,12 @@
 		78B72C891948509600BB048E /* FinaliTunesTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FinaliTunesTests-Info.plist"; sourceTree = "<group>"; };
 		78B72C8B1948509600BB048E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		78B72C8D1948509600BB048E /* FinaliTunesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FinaliTunesTests.m; sourceTree = "<group>"; };
+		78B72C971948585900BB048E /* SBTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBTableViewController.h; sourceTree = "<group>"; };
+		78B72C981948585900BB048E /* SBTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBTableViewController.m; sourceTree = "<group>"; };
+		78B72C9A194858AF00BB048E /* SBTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBTableViewCell.h; sourceTree = "<group>"; };
+		78B72C9B194858AF00BB048E /* SBTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBTableViewCell.m; sourceTree = "<group>"; };
+		78B72CA3194889C000BB048E /* SBdata.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBdata.h; sourceTree = "<group>"; };
+		78B72CA4194889C000BB048E /* SBdata.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBdata.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +91,8 @@
 		78B72C561948509600BB048E = {
 			isa = PBXGroup;
 			children = (
+				78B72CA3194889C000BB048E /* SBdata.h */,
+				78B72CA4194889C000BB048E /* SBdata.m */,
 				78B72C681948509600BB048E /* FinaliTunes */,
 				78B72C871948509600BB048E /* FinaliTunesTests */,
 				78B72C611948509600BB048E /* Frameworks */,
@@ -115,8 +126,12 @@
 				78B72C711948509600BB048E /* SBAppDelegate.h */,
 				78B72C721948509600BB048E /* SBAppDelegate.m */,
 				78B72C741948509600BB048E /* Main.storyboard */,
+				78B72C971948585900BB048E /* SBTableViewController.h */,
+				78B72C981948585900BB048E /* SBTableViewController.m */,
 				78B72C771948509600BB048E /* SBViewController.h */,
 				78B72C781948509600BB048E /* SBViewController.m */,
+				78B72C9A194858AF00BB048E /* SBTableViewCell.h */,
+				78B72C9B194858AF00BB048E /* SBTableViewCell.m */,
 				78B72C7A1948509600BB048E /* Images.xcassets */,
 				78B72C691948509600BB048E /* Supporting Files */,
 			);
@@ -250,9 +265,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78B72CA5194889C000BB048E /* SBdata.m in Sources */,
 				78B72C6F1948509600BB048E /* main.m in Sources */,
 				78B72C791948509600BB048E /* SBViewController.m in Sources */,
+				78B72C991948585900BB048E /* SBTableViewController.m in Sources */,
 				78B72C731948509600BB048E /* SBAppDelegate.m in Sources */,
+				78B72C9C194858AF00BB048E /* SBTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,6 +395,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FinaliTunes/FinaliTunes-Prefix.pch";
 				INFOPLIST_FILE = "FinaliTunes/FinaliTunes-Info.plist";
@@ -390,6 +409,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FinaliTunes/FinaliTunes-Prefix.pch";
 				INFOPLIST_FILE = "FinaliTunes/FinaliTunes-Info.plist";
@@ -457,6 +477,7 @@
 				78B72C931948509600BB048E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		78B72C941948509600BB048E /* Build configuration list for PBXNativeTarget "FinaliTunesTests" */ = {
 			isa = XCConfigurationList;
@@ -465,6 +486,7 @@
 				78B72C961948509600BB048E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
