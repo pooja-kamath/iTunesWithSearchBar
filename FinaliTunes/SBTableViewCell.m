@@ -13,6 +13,7 @@
 @synthesize trackNameLabel;
 @synthesize collectionNameLabel;
 @synthesize priceLabel;
+@synthesize image;
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
@@ -52,8 +53,9 @@
         [artistNameLabel setTextColor: [UIColor blackColor]];
         [self addSubview:artistNameLabel];
         
-        
-        
+        CGRect imageFrame=CGRectMake(0, 0, 100,100);
+        image=[[UIImageView alloc]initWithFrame:imageFrame];
+        [self addSubview:image];
         
        
             }
@@ -63,9 +65,7 @@
 {
     [super layoutSubviews];
     
-    
-    
-    
+   
     
    
 }

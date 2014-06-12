@@ -60,8 +60,8 @@
 		78B72C981948585900BB048E /* SBTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBTableViewController.m; sourceTree = "<group>"; };
 		78B72C9A194858AF00BB048E /* SBTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBTableViewCell.h; sourceTree = "<group>"; };
 		78B72C9B194858AF00BB048E /* SBTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBTableViewCell.m; sourceTree = "<group>"; };
-		78B72CA3194889C000BB048E /* SBdata.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBdata.h; sourceTree = "<group>"; };
-		78B72CA4194889C000BB048E /* SBdata.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBdata.m; sourceTree = "<group>"; };
+		78B72CA3194889C000BB048E /* SBdata.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBdata.h; path = ../SBdata.h; sourceTree = "<group>"; };
+		78B72CA4194889C000BB048E /* SBdata.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBdata.m; path = ../SBdata.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,8 +91,6 @@
 		78B72C561948509600BB048E = {
 			isa = PBXGroup;
 			children = (
-				78B72CA3194889C000BB048E /* SBdata.h */,
-				78B72CA4194889C000BB048E /* SBdata.m */,
 				78B72C681948509600BB048E /* FinaliTunes */,
 				78B72C871948509600BB048E /* FinaliTunesTests */,
 				78B72C611948509600BB048E /* Frameworks */,
@@ -125,6 +123,8 @@
 			children = (
 				78B72C711948509600BB048E /* SBAppDelegate.h */,
 				78B72C721948509600BB048E /* SBAppDelegate.m */,
+				78B72CA3194889C000BB048E /* SBdata.h */,
+				78B72CA4194889C000BB048E /* SBdata.m */,
 				78B72C741948509600BB048E /* Main.storyboard */,
 				78B72C971948585900BB048E /* SBTableViewController.h */,
 				78B72C981948585900BB048E /* SBTableViewController.m */,

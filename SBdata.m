@@ -10,15 +10,25 @@
 
 @implementation SBdata
 @synthesize moviesArray;
--(NSArray *)getData
+
+-(NSArray *)getDatawithString:(NSString *)searchString
 {
 
+    NSString * initialString=@"https://itunes.apple.com/search?term=";
+   // NSString *appendingString=[_searchText.text stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    //NSLog(@"%@",appendingString);
+     NSString *lastString=@"&entity=musicVideo";
+    searchString=[searchString stringByReplacingOccurrencesOfString:@" " withString:@"+"];
     
+   NSString *searchUrl=[initialString stringByAppendingString:searchString];
+    searchUrl=[searchUrl stringByAppendingString:lastString];
+   
+    NSLog(@"%@",searchUrl);
     
-    NSData* data = [NSData dataWithContentsOfURL:[NSURL URLWithString:@"https://itunes.apple.com/search?term=jack+johnson&entity=musicVideo"]];
+    NSData* data = [NSData dataWithContentsOfURL:[NSURL URLWithString:searchUrl]];
     
     return[self fetchedData:data];
-    
+  
 }
 - (NSArray *)fetchedData:(NSData *)responseData
 {
@@ -27,6 +37,8 @@
     NSDictionary* json = [NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:&error];
     
     moviesArray = [json objectForKey:@"results"];
+    NSLog(@"%@",moviesArray);
     return moviesArray;
-}
+   
+   }
 @end

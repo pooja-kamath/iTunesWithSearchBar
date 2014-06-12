@@ -13,5 +13,5 @@
 @property (retain, nonatomic) UILabel *collectionNameLabel;
 @property (retain, nonatomic) UILabel *priceLabel;
 @property (retain, nonatomic) UILabel *artistNameLabel;
-
+@property (retain,nonatomic) UIImageView *image;
 @end

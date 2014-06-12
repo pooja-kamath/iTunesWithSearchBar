@@ -10,5 +10,6 @@
 
 @interface SBdata : NSObject
 @property (nonatomic, retain) NSArray *moviesArray;
--(NSArray *)getData;
+-(NSArray *)getDatawithString:(NSString *)searchString;
+
 @end

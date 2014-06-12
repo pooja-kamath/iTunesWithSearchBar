@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import "SBTableViewCell.h"
-@interface SBTableViewController : UITableViewController<UITableViewDataSource,UITableViewDelegate>
-@property (assign) NSArray *moviesArray;
+@interface SBTableViewController : UITableViewController<UISearchBarDelegate>
+@property (assign) NSMutableArray *moviesArray;
 @end

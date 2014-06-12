@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>014166ED-B1A8-4251-A313-85C29F76E4F3</string>
+	<key>IDESourceControlProjectName</key>
+	<string>FinaliTunes</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>7CE108A0-B80D-40A8-AF79-9E29ACBDDBB4</key>
+		<string>https://github.com/pooja-kamath/itunes.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>FinaliTunes.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>7CE108A0-B80D-40A8-AF79-9E29ACBDDBB4</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/pooja-kamath/itunes.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>7CE108A0-B80D-40A8-AF79-9E29ACBDDBB4</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>7CE108A0-B80D-40A8-AF79-9E29ACBDDBB4</string>
+			<key>IDESourceControlWCCName</key>
+			<string>FinaliTunes</string>
+		</dict>
+	</array>
+</dict>
+</plist>

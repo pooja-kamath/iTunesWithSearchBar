@@ -11,6 +11,7 @@
 #import "SBdata.h"
 @interface SBTableViewController ()
 @property (retain, nonatomic) IBOutlet UITableView *tableView;
+@property (retain, nonatomic) IBOutlet UISearchBar *searchBar;
 
 @end
 
@@ -30,12 +31,45 @@
 {
     [super viewDidLoad];
      [self.tableView registerClass:[SBTableViewCell class] forCellReuseIdentifier:@"SimpleTableItems"];
-    SBdata *data=[[SBdata alloc]init];
-   moviesArray=[[NSArray alloc]initWithArray:[data getData]];
-    
+    self.searchBar.delegate=self;
     
   }
+- (void)searchBarCancelButtonClicked:(UISearchBar *) searchBar
+{
+    [searchBar resignFirstResponder];
+}
 
+- (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar
+{
+    [searchBar setShowsCancelButton:YES animated:YES];
+}
+- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText
+{
+    
+    
+    [self startSearch:searchBar.text];
+    //[self resignFirstResponder];
+}
+
+
+- (void)startSearch:(NSString *)searchString
+{
+       SBdata *data=[[SBdata alloc]init];
+    moviesArray=[[NSMutableArray alloc]initWithArray:[data getDatawithString:searchString]];
+    [self.tableView reloadData];
+    [data release];
+
+}
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
+{
+    [searchBar resignFirstResponder];
+   [self startSearch:searchBar.text];
+    
+}
+-(void)searchBarTextDidEndEditing:(UISearchBar *)searchBar
+{
+    [searchBar setShowsCancelButton:NO animated:YES];
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -53,7 +87,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-
+    
     // Return the number of rows in the section.
     return moviesArray.count;
 }
@@ -62,7 +96,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     SBTableViewCell *cell =  cell = [tableView dequeueReusableCellWithIdentifier:@"SimpleTableItems"];
-  
+   
     NSDictionary *movieDictionary = [moviesArray objectAtIndex:indexPath.row];
     cell.trackNameLabel.text=[movieDictionary objectForKey:@"trackName"];
     
@@ -72,8 +106,12 @@
        cell.artistNameLabel.text=[movieDictionary objectForKey:@"artistName"];
     
     NSURL *url = [[NSURL alloc] initWithString:[movieDictionary objectForKey:@"artworkUrl100"]];
-    NSData *data = [NSData dataWithContentsOfURL:url];
-    cell.imageView.image = [[UIImage alloc] initWithData:data];
+    NSData *imgdata = [NSData dataWithContentsOfURL:url];
+    UIImage *img=[[UIImage alloc]initWithData:imgdata];
+//    cell.imageView.image = [[UIImage alloc] initWithData:imgdata];
+    [cell.image setImage:img];
+    [url release];
+   
 
     return cell;
 }
@@ -81,6 +119,7 @@
 
 - (void)dealloc {
  
+    [_searchBar release];
     [super dealloc];
 }
 @end
